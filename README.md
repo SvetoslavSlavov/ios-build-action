@@ -180,6 +180,10 @@ Custom keychain name. Default `ios-build.keychain`
 
 Custom arguments.
 
+### `custom-toolchain`
+
+Create a custom toolchain.
+
 ## Contributions Welcome!
 
 If you have any other inputs you'd like to add, feel free to create PR.

@@ -24,9 +24,14 @@ async function run() {
     // Validate increment build number
     if (
       core.getInput("increment-build-number") === "testflight" &&
-      (!core.getInput("bundle-identifier") || !core.getInput("app-store-connect-api-key-id") || !core.getInput("app-store-connect-api-key-issuer-id") || !core.getInput("app-store-connect-api-key-base64"))
+      (!core.getInput("bundle-identifier") ||
+        !core.getInput("app-store-connect-api-key-id") ||
+        !core.getInput("app-store-connect-api-key-issuer-id") ||
+        !core.getInput("app-store-connect-api-key-base64"))
     ) {
-      throw new Error("increment-build-number='testflight' requires 'bundle-identifier', 'app-store-connect-api-key-id', 'app-store-connect-api-key-issuer-id' and 'app-store-connect-api-key-base64' to be provided.");
+      throw new Error(
+        "increment-build-number='testflight' requires 'bundle-identifier', 'app-store-connect-api-key-id', 'app-store-connect-api-key-issuer-id' and 'app-store-connect-api-key-base64' to be provided."
+      );
     }
 
     // Set environment variables
@@ -58,15 +63,26 @@ async function run() {
     process.env.BUILD_SDK = core.getInput("build-sdk");
     process.env.BUILD_DESTINATION = core.getInput("build-destination");
     process.env.ENTITLMENTS_FILE_PATH = core.getInput("entitlements-file-path");
-    process.env.INCREMENT_BUILD_NUMBER = core.getInput("increment-build-number");
-    process.env.INCREMENT_VERSION_NUMBER = core.getInput('increment-version-number');
-    process.env.BUNDLE_IDENTIFIER = core.getInput('bundle-identifier');
-    process.env.APP_STORE_CONNECT_API_KEY_ID = core.getInput('app-store-connect-api-key-id');
-    process.env.APP_STORE_CONNECT_API_KEY_ISSUER_ID = core.getInput('app-store-connect-api-key-issuer-id');
-    process.env.APP_STORE_CONNECT_API_KEY_BASE64 = core.getInput('app-store-connect-api-key-base64');
-    process.env.BUILD_PATH = core.getInput('build-path');
-    process.env.CUSTOM_KEYCHAIN_NAME = core.getInput('custom-keychain-name');
-    process.env.CUSTOM_ARGS = core.getInput('custom-args');
+    process.env.INCREMENT_BUILD_NUMBER = core.getInput(
+      "increment-build-number"
+    );
+    process.env.INCREMENT_VERSION_NUMBER = core.getInput(
+      "increment-version-number"
+    );
+    process.env.BUNDLE_IDENTIFIER = core.getInput("bundle-identifier");
+    process.env.APP_STORE_CONNECT_API_KEY_ID = core.getInput(
+      "app-store-connect-api-key-id"
+    );
+    process.env.APP_STORE_CONNECT_API_KEY_ISSUER_ID = core.getInput(
+      "app-store-connect-api-key-issuer-id"
+    );
+    process.env.APP_STORE_CONNECT_API_KEY_BASE64 = core.getInput(
+      "app-store-connect-api-key-base64"
+    );
+    process.env.BUILD_PATH = core.getInput("build-path");
+    process.env.CUSTOM_KEYCHAIN_NAME = core.getInput("custom-keychain-name");
+    process.env.CUSTOM_ARGS = core.getInput("custom-args");
+    process.env.CUSTOM_TOOLCHAIN = core.getInput("custom-toolchain");
     // Execute build.sh
     await exec.exec(`bash ${__dirname}/../build.sh`);
   } catch (error) {

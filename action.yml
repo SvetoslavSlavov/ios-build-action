@@ -118,6 +118,10 @@ inputs:
     description: 'Custom Keychain Name'
     required: false
     default: "ios-build.keychain"
+  custom-toolchain: 
+    description: 'Custom Toolchain'
+    required: false
+    default: ""  
   custom-args:
     description: 'Add custom args'
     required: false
