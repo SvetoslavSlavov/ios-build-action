@@ -126,6 +126,10 @@ inputs:
     description: 'Add custom args'
     required: false
     default: ""
+  include_bitcode:
+    description: 'Has include bitcode'
+    required: false
+    default: ""  
 runs:
   using: "node16"
   main: "dist/index.js"

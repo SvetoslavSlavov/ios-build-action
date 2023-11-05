@@ -184,6 +184,10 @@ Custom arguments.
 
 Create a custom toolchain.
 
+### `include_bitcode`
+
+Should include bitcode
+
 ## Contributions Welcome!
 
 If you have any other inputs you'd like to add, feel free to create PR.

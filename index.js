@@ -83,6 +83,7 @@ async function run() {
     process.env.CUSTOM_KEYCHAIN_NAME = core.getInput("custom-keychain-name");
     process.env.CUSTOM_ARGS = core.getInput("custom-args");
     process.env.CUSTOM_TOOLCHAIN = core.getInput("custom-toolchain");
+    process.env.INCLUDE_BITCODE = core.getInput("include_bitcode");
     // Execute build.sh
     await exec.exec(`bash ${__dirname}/../build.sh`);
   } catch (error) {

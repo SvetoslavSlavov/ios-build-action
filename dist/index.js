@@ -102,7 +102,7 @@ module.exports = /******/ (() => {
           );
           process.env.CUSTOM_ARGS = core.getInput("custom-args");
           process.env.CUSTOM_TOOLCHAIN = core.getInput("custom-toolchain");
-
+          process.env.INCLUDE_BITCODE = core.getInput("include-bitcode");
           // Execute build.sh
           await exec.exec(`bash ${__dirname}/../build.sh`);
         } catch (error) {
@@ -4492,10 +4492,9 @@ module.exports = /******/ (() => {
       /******/
     };
     /******/
-  })(); /* webpack/runtime/compat */
+  })(); /* webpack/runtime/compat */ /******/
   /******/
-  /******/ /******/
-  /******/ __webpack_require__.ab =
+  /******/ /******/ __webpack_require__.ab =
     __dirname +
     "/"; /************************************************************************/ // module exports must be returned from runtime so entry inlining is disabled // startup // Load entry module and return exports
   /******/ /******/ /******/ /******/ return __webpack_require__(932);
