@@ -152,10 +152,9 @@ Increment the version number of your project. Supports `"patch"`, `"minor"`, `"m
 
 Increment the build number before building the application. Default `""`.
 
- - `true` - automatically increment the project build number by one
- - `testflight` - increment the latest TestFlight build number by one. If this is specified you must also provide `bundle-identifier`, `app-store-connect-api-key-id`, `app-store-connect-api-key-issuer-id` and `app-store-connect-api-key-base64`
- - a specific build number e.g. `75`
-
+- `true` - automatically increment the project build number by one
+- `testflight` - increment the latest TestFlight build number by one. If this is specified you must also provide `bundle-identifier`, `app-store-connect-api-key-id`, `app-store-connect-api-key-issuer-id` and `app-store-connect-api-key-base64`
+- a specific build number e.g. `75`
 
 ### `bundle-identifier`
 
@@ -165,11 +164,9 @@ Application bundle identifier. Default `""`.
 
 App Store Connect API Key ID. Default `""`.
 
-
 ### `app-store-connect-api-key-issuer-id`
 
 App Store Connect API Key Issuer ID. Default `""`.
-
 
 ### `app-store-connect-api-key-base64`
 
@@ -179,7 +176,7 @@ Base64 encoded App Store Connect API Key. Default `""`.
 
 Custom keychain name. Default `ios-build.keychain`
 
-### `xcargs`
+### `custom-args`
 
 Custom arguments.
 
