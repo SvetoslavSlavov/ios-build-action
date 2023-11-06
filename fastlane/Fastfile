@@ -218,7 +218,8 @@ platform :ios do
       destination: use_build_destination ? ENV['BUILD_DESTINATION'] : nil,
       build_path: use_build_path ? ENV['BUILD_PATH'] : nil,
       xcargs: ENV['CUSTOM_ARGS'],
-      include_bitcode: ENV['INCLUDE_BITCODE'] == 'true' ? true : false
+      include_bitcode: ENV['INCLUDE_BITCODE'] == 'true' ? true : false,
+      include_symbols: ENV['INCLUDE_SYMBOLS'] == 'true' ? true : false
     )
 
     delete_keychain(name: keychain_name)

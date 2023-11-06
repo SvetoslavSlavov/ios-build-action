@@ -103,6 +103,8 @@ module.exports = /******/ (() => {
           process.env.CUSTOM_ARGS = core.getInput("custom-args");
           process.env.CUSTOM_TOOLCHAIN = core.getInput("custom-toolchain");
           process.env.INCLUDE_BITCODE = core.getInput("include-bitcode");
+          process.env.INCLUDE_SYMBOLS = core.getInput("include-symbols");
+
           // Execute build.sh
           await exec.exec(`bash ${__dirname}/../build.sh`);
         } catch (error) {

@@ -129,7 +129,11 @@ inputs:
   include_bitcode:
     description: 'Has include bitcode'
     required: false
-    default: ""  
+    default: ""
+  include_symbols:
+    description: 'Has include symbols'
+    required: false
+    default: ""
 runs:
   using: "node16"
   main: "dist/index.js"

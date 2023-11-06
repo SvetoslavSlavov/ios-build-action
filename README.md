@@ -188,6 +188,10 @@ Create a custom toolchain.
 
 Should include bitcode
 
+### `include_symbols`
+
+Should include symbols
+
 ## Contributions Welcome!
 
 If you have any other inputs you'd like to add, feel free to create PR.
